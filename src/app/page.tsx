@@ -1,3 +1,9 @@
+"use client";
+
+import React, { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import Calendar from "@/components/dashboard/calendar";
+
 const exportModes = [
   {
     label: "Attendance",
@@ -35,6 +41,16 @@ const highlights = [
 ];
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const match = document.cookie.match(new RegExp("(^| )authToken=([^;]+)"));
+    const token = match ? match[2] : null;
+    if (!token) {
+      router.push("/login");
+      return;
+    }
+  }, [router]);
   return (
     <main className="min-h-screen px-5 py-6 sm:px-8 lg:px-12 lg:py-10">
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8">

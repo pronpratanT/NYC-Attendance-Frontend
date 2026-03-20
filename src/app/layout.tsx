@@ -14,7 +14,7 @@ const cormorantGaramond = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "MOS HR Export Console",
+  title: "HR System",
   description:
     "Internal HR workspace for exporting attendance and overtime data with confidence.",
 };

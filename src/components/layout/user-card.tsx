@@ -61,19 +61,19 @@ function UserCard() {
                 : "Guest User"}
             </div>
             <div className="text-xs text-gray-300">
-              ID: {user?.employee_id ? String(user.employee_id) : "-"}
+              รหัสพนักงาน: {user?.employee_id ? String(user.employee_id) : "-"}
             </div>
           </div>
         </div>
         <div className="text-sm mt-2">
           <div>
-            <span className="font-medium">Department:</span>{" "}
+            <span className="font-medium">แผนก:</span>{" "}
             {user?.department_id !== undefined
               ? String(user.department_id)
               : "-"}
           </div>
           <div className="flex items-center gap-2">
-            <span className="font-medium">Status:</span>
+            <span className="font-medium">สถานะ:</span>
             {user?.is_active ? (
               <span title="Active" className="inline-block w-3 h-3 rounded-full bg-green-400 border border-green-700"></span>
             ) : (
