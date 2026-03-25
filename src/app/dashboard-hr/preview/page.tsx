@@ -9,7 +9,7 @@ export default function PreviewPage() {
         <div>
             <Calendar />
         </div>
-        <div>
+        <div className=''>
             <CalendarTest />
         </div>
     </div>
